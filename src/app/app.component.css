@@ -1,0 +1,21 @@
+.navbar .navbar-light .navbar-nav{
+
+    text-align: start;
+}
+.navbar-light .navbar-nav
+{
+ margin-left: 20%;
+}
+.navbar-light .navbar-nav .nav-link
+{
+    color:cornsilk;
+    font-size:20px;
+    font-family:sans-serif;
+}
+.navbar-light .navbar-nav .nav-link:hover
+{
+ color:crimson;
+ font-size: 21px;
+ transition: .5s;
+}
+

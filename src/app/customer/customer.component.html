@@ -1,0 +1,55 @@
+<Section class="" style="background-color: darkgrey;">
+<button class="btn btn-primary mt-2 mx-2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Notes</button>
+
+<table class="table mt-3 ml-3">
+    <thead style="background-color:cornsilk;">
+      <tr>
+        <th scope="col">Serial No.</th>
+        <th scope="col">Title</th>
+        <th scope="col">Notes</th>
+      </tr>
+    </thead>
+    <tbody class="">
+      <tr *ngFor="let row of customerData">
+       <td>{{row.Customerid}}</td>
+       <td>{{row.Name}}</td>
+       <td>{{row.Mobile}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="text-center" id="exampleModalLabel" style=" text-align: center;font-size: 20px;color: darkmagenta;">NOTES DETAIL</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="background-color: darkseagreen;">
+        <form [formGroup]="formValue">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Serial No.</label>
+            <input type="number" formControlName="Customerid" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Title</label>
+            <input type="text" formControlName="Name" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Notes</label>
+            <textarea type="text" formControlName="Mobile"  class="form-control" id="exampleInputPassword1"></textarea>
+          </div>
+          
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" (click)="postcustomerDetails()" class="btn btn-primary" >Add Notes</button>
+      </div>
+    </div>
+  </div>
+</div>
+</Section>
